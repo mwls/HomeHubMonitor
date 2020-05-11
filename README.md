@@ -13,7 +13,7 @@ To use 'hub-monitor.py' only really requires you to edit one line, with your fav
 To use 'hub-plotter.py' you just need to edit line 11 to point to your pickle file from the 'hub-monitor' script. However, you may wish to change lines 18-27 for what you believe is the optimum/acceptable levels, and the expected speed of your connection.
 
 ### Example Output
-Good Connection                     |  Problematic Connection (before fix)
+Good Connection                     |  Problematic Connection (before was fixed)
 :----------------------------------:|:----------------------------------:
 ![](https://github.com/mwls/HomeHubMonitorer/blob/master/good3.png) |  ![](https://github.com/mwls/HomeHubMonitorer/blob/master/problemConnection.png)
 
