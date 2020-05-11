@@ -1,2 +1,3 @@
-# HomeHubMonitorer
-This repository is for a program designed to monior your Virgin Media connection based on information provided by Hub 3.0 (not tested on other routers)
+# Virgin Home Hub 3.0 Connection Monitorer 
+
+This repository is a python program designed to monior your Virgin Media connection to help diagnose any connection issues. Note that this is no substitute to phoning Virgin/booking an engineer, but just helps gather information to you (& Virgin) to better diagnose any problems you may be having (note this is completly unofficial, but just something I developed when I was having intermittant issues). The script will monitor the Downstream Power levels, Upstream Power levels, number of Pre-RS and Post-RS errors in the time since the last sampling, Downstream SNR, and also use the speedtest package to test ping, download/upload speeds. Note this has only been tested on the Hub 3.0, and probably won't work on other equipment.
