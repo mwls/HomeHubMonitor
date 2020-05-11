@@ -15,6 +15,6 @@ To use 'hub-plotter.py' you just need to edit line 11 to point to your pickle fi
 ### Example Output
 Good Connection                     |  Problematic Connection (before fix)
 :----------------------------------:|:----------------------------------:
-![](https://github.com/mwls/HomeHubMonitorer/blon/master/good3.png) |  ![](https://github.com/mwls/HomeHubMonitorer/blob/master/problemConnection.png)
+![](https://github.com/mwls/HomeHubMonitorer/blob/master/good3.png) |  ![](https://github.com/mwls/HomeHubMonitorer/blob/master/problemConnection.png)
 
 ### Dependices 
