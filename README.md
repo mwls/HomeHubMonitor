@@ -18,3 +18,12 @@ Good Connection                     |  Problematic Connection (before fix)
 ![](https://github.com/mwls/HomeHubMonitorer/blob/master/good3.png) |  ![](https://github.com/mwls/HomeHubMonitorer/blob/master/problemConnection.png)
 
 ### Dependices 
+
+This script really does not do a lot, but just brings together a collection of public python packages/modules. To run the script you will need the following packages installed:
+- pause
+- requests
+- urllib
+- bs4
+- speedtest
+- numpy
+- matplotlib
