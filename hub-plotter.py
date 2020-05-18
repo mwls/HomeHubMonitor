@@ -78,16 +78,16 @@ for i in range(1,len(splitPoints)):
         ypoints = np.array([])
         for j in range(splitPoints[i-1]+1, splitPoints[i]):
             if data["downStream"][key]["preRS"][j] - data["downStream"][key]["preRS"][j-1] < 0:
-                preRS = data["downStream"][key]["preRS"][j]
+                preRS = data["downStream"][key]["preRS"][j] / ((time[j] - time[j-1]).total_seconds()/60.)
             else:
-                preRS = data["downStream"][key]["preRS"][j] - data["downStream"][key]["preRS"][j-1]
+                preRS = (data["downStream"][key]["preRS"][j] - data["downStream"][key]["preRS"][j-1]) / ((time[j] - time[j-1]).total_seconds()/60.)
             xpoints = np.append(xpoints, time[j-1])
             ypoints = np.append(ypoints, preRS)
             xpoints = np.append(xpoints, time[j])
             ypoints = np.append(ypoints, preRS)
         f1.plot(xpoints, ypoints)
 f1.set_yscale('log')
-f1.set_ylabel("Pre-RS Errors")
+f1.set_ylabel("Pre-RS Errors (per min)")
 f1.minorticks_on()
 f1.tick_params(axis='both', direction='in', which='both')
 f1.tick_params(top=True, right=True, which='both')
@@ -105,16 +105,16 @@ for i in range(1,len(splitPoints)):
         ypoints = np.array([])
         for j in range(splitPoints[i-1]+1, splitPoints[i]):
             if data["downStream"][key]["postRS"][j] - data["downStream"][key]["postRS"][j-1] < 0:
-                preRS = data["downStream"][key]["postRS"][j]
+                preRS = data["downStream"][key]["postRS"][j]/ ((time[j] - time[j-1]).total_seconds()/60.)
             else:
-                preRS = data["downStream"][key]["postRS"][j] - data["downStream"][key]["postRS"][j-1]
+                preRS = (data["downStream"][key]["postRS"][j] - data["downStream"][key]["postRS"][j-1])/ ((time[j] - time[j-1]).total_seconds()/60.)
             xpoints = np.append(xpoints, time[j-1])
             ypoints = np.append(ypoints, preRS)
             xpoints = np.append(xpoints, time[j])
             ypoints = np.append(ypoints, preRS)
         f2.plot(xpoints, ypoints)
 f2.set_yscale('log')
-f2.set_ylabel("Post-RS Errors")
+f2.set_ylabel("Post-RS Errors (per min)")
 f2.minorticks_on()
 f2.tick_params(axis='both', direction='in', which='both')
 f2.tick_params(top=True, right=True, which='both')
